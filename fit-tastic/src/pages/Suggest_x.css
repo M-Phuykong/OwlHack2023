@@ -1,0 +1,126 @@
+* {
+  font-family: 'Poppins';
+  font-size: 18px;
+}
+
+#senjougahara {
+  position: absolute;
+  height: 64px;
+  width: 64px;
+  top: 500px;
+  left: 0px;
+
+  z-index: -100;
+}
+
+form {
+  text-align:center;
+  align-items: center;
+  justify-content: center;
+
+  }
+input[type='radio']{
+  justify-content: center;
+  width:10px;
+  margin: 10px;
+  transform: scale(1.5);
+  }
+
+#inches, #feet {
+  width: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.426);
+}
+#weight {
+  width: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.426);
+}
+
+#age {
+  width: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.426);
+
+}
+#calories {
+  width: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.426);
+}
+#cuisine {
+  width: 100px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.426);
+
+}
+
+.button-19 {
+
+
+appearance: button;
+background-color: rgb(8, 146, 75);
+border: solid transparent;
+border-radius: 16px;
+border-width: 0 0 4px;
+box-sizing: border-box;
+color: #FFFFFF;
+cursor: pointer;
+display: inline-block;
+font-family: "Poppins" ,sans-serif;
+font-size: 15px;
+font-weight: 700;
+letter-spacing: .8px;
+line-height: 20px;
+margin: 0;
+outline: none;
+overflow: visible;
+padding: 13px 16px;
+text-align: center;
+text-transform: uppercase;
+touch-action: manipulation;
+transform: translateZ(0);
+transition: filter .2s;
+user-select: none;
+-webkit-user-select: none;
+vertical-align: middle;
+white-space: nowrap;
+width: 15%;
+margin-top: 20px;
+}
+
+.button-19:after {
+background-clip: padding-box;
+background-color: #58e455;
+border: solid transparent;
+border-radius: 16px;
+border-width: 0 0 4px;
+bottom: -4px;
+content: "";
+left: 0;
+position: absolute;
+right: 0;
+top: 0;
+z-index: -1;
+}
+
+.button-19:main,
+.button-19:focus {
+user-select: auto;
+}
+
+.button-19:hover:not(:disabled) {
+filter: brightness(1.1);
+-webkit-filter: brightness(1.1);
+}
+
+.button-19:disabled {
+cursor: auto;
+}
+
+#dietary {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.426);
+
+}
+
+#response {
+
+  text-align: center;
+  max-width: 50%;
+
+}
