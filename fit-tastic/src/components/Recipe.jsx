@@ -21,12 +21,12 @@ export default function Recipe() {
   const [ingredient, setIngredient] = useState("");
   const [recipe, setRecipe] = useState([]);
 
-  const API_KEY = "8139bf4a37e04227aedb82215ae18c29"
+  const API_KEY = "54556ddcbdf24ee1b64a8ead0e4dc847"
 
   const onSubmit = data => {
     // console.log(data["ingredient"])
-    // getRecipe(data["ingredient"])
-    setRecipe(data["ingredient"])
+    getRecipe(data["ingredient"])
+    // setRecipe(data["ingredient"])
 
 
   };
@@ -42,46 +42,40 @@ export default function Recipe() {
       })
   }
 
-
-
   return (
-    <div className='w-screen h-full'>
+    <div className='w-full h-full'>
       <form onSubmit={handleSubmit(onSubmit)}>
-        {/* register your input into the hook by invoking the "register" function */}
-        <input {...register("ingredient", {
+        <h1>Ingredients</h1>
+        <input  placeholder="Please input your ingredient with comma separated value"
+        {...register("ingredient", {
           required: "This input is required.",
-          pattern : {
-            value: /^[a-zA-Z\s]+\,[a-zA-Z\s]+$/,
-            message: "This input can only container alphabets and must be separated by a comma."
-          }
-        })} />
+          })
+        }
+        />
 
         <ErrorMessage
-        errors={errors}
-        name="multipleErrorInput"
-        render={({ messages }) => {
-          console.log(messages);
-          return messages
+          errors={errors}
+          name="multipleErrorInput"
+          render={({ messages }) => {
+            console.log("messages", messages);
+            return messages
             ? Object.entries(messages).map(([type, message]) => (
-                <p key={type}>{message}</p>
+              <p key={type}>{message}</p>
               ))
-            : null;
-        }}
-      />
+              : null;
+            }}
+        />
 
         <input type="submit" />
       </form>
 
-      <div className='text-20 h-8'>{recipe}</div>
-
-       <div
-    draggable="false"
-    className="
-    w-5/12
-    h-full
-    align-middle
-    "
-    >
+      <div
+      draggable="false"
+      className="
+      w-full
+      h-fit
+      "
+      >
         <Swiper
             effect={"cards"}
             grabCursor={true}
@@ -98,57 +92,7 @@ export default function Recipe() {
             // }}
             className="h-full w-3/5">
 
-              <SwiperSlide
-                        className="
-                        flex
-                        min-h-full
-                        items-center
-                        justify-items-center
-                        "
-                        >
-                          <RecipeCard ></RecipeCard>
-
-                </SwiperSlide>
-
-              <SwiperSlide
-                        className="
-                        flex
-                        min-h-full
-                        items-center
-                        justify-items-center
-                        "
-                        >
-                          <RecipeCard ></RecipeCard>
-
-                </SwiperSlide>
-
-                            <SwiperSlide
-                        className="
-                        flex
-                        min-h-full
-                        items-center
-                        justify-items-center
-                        "
-                        >
-                          <RecipeCard ></RecipeCard>
-
-                </SwiperSlide>
-
-                              <SwiperSlide
-                        className="
-                        flex
-                        min-h-full
-                        items-center
-                        justify-items-center
-                        "
-                        >
-                          <RecipeCard ></RecipeCard>
-
-                </SwiperSlide>
-
-
-
-            {/* {recipe.map((item , ind) => {
+            {recipe.map((item , ind) => {
 
               return (
 
@@ -164,7 +108,7 @@ export default function Recipe() {
 
                   </SwiperSlide>
                 )
-            } )} */}
+            } )}
 
         </Swiper>
     </div>

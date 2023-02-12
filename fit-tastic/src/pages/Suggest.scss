@@ -1,32 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
-$primary-bg-color: #b2f5aa;
+$primary-bg-color: #07D474;
 $secondary-bg-color: #807182;
 $font-color: rgba(0,0,0,.8);
 $font-family: 'Montserrat',sans-serif;
 $form-border-color: rgba(0,0,0,.1);
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-body {
-    align-items: center;
-    background: #ffffff;
-    color: $font-color;
-    display: grid;
-    font-family: $font-family;
-    font-size: 14px;
-    font-weight: 400;
-    height: 100vh;
-    justify-items: center;
-    weight: 100vw;
-}
-
 .signup-container {
     display: grid;
+    border-radius: 10px;
     grid-template-areas: "left right";
-    max-width: 900px;
 }
 
 .left-container {
@@ -35,7 +17,9 @@ body {
     padding: 40px 0 0 0;
     position: relative;
     text-align: center;
-    width: 300px;
+    justify-items: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 
     & h1 {
         color: $font-color;
@@ -77,10 +61,12 @@ body {
 }
 
 .right-container {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     background: lighten($primary-bg-color, 5%);
     display: grid;
     grid-template-areas: "." ".";
-    width: 500px;
+
 
     & h1:nth-of-type(1) {
         color: $font-color;
@@ -111,7 +97,7 @@ body {
     }
 
     & label, input, .pets-photo {
-      width: 176px;
+      width: fit-content;
     }
 
     & .pets-photo {
@@ -126,11 +112,13 @@ body {
           margin-right: 10px;
           outline: none;
           width: 38px;
+
       }
 
       & button i {
           color: $font-color;
           font-size: 16px;
+
       }
     }
 
@@ -145,6 +133,7 @@ body {
       background: #96d79c;
       display: grid;
       padding: 5px 40px;
+      border-bottom-right-radius: 10px;
 
       & button {
         border: 1px solid rgba(0,0,0,.2);
@@ -153,6 +142,7 @@ body {
         width: 100px;
         border-radius: 19px;
         font-family: $font-family;
+        line-height: 16px;
       }
 
       & #back {
