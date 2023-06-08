@@ -1,5 +1,5 @@
 # OwlHack2023
 
-## Please Check out our DevPost!
+## Please check our DevPost!
 
 https://devpost.com/software/fit-tastic
